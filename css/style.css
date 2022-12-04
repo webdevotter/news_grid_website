@@ -2,7 +2,7 @@
   --primary-color: #c72727;
   --secondary-color: #f99500;
   --light-color: #f3f3f3;
-  ---dark-color: #333;
+  --dark-color: #333;
   --max-width: 1100px;
 }
 
@@ -31,6 +31,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+p {
+  margin: .5rem 0;
 }
 
 img {
@@ -69,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   display: inline-block;
   border: none;
-  background: var(---dark-color);
+  background: var(--dark-color);
   color: #fff;
   padding: 0.5rem 1.5rem;
 }
@@ -94,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-dark {
-  background: var(---dark-color);
+  background: var(--dark-color);
   color: #fff;
 }
 
@@ -104,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-secondary {
-  background: var(---secondary-color);
+  background: var(--secondary-color);
   color: #fff;
 }
 
@@ -129,6 +133,16 @@ h1, h2, h3, h4, h5, h6 {
 .p-1 { padding: 1.5rem}
 .p-2 { padding: 2rem}
 .p-3 { padding: 3rem}
+
+.list li {
+  padding: .5rem 0;
+  border-bottom: #555 dotted 1px;
+  width: 90%;
+}
+
+.list li a:hover {
+  color: var(--primary-color) !important;
+}
 
 /* Navigation */
 #main-nav {
@@ -166,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-nav ul li a:hover {
   background: var(--light-color);
-  color: var(---dark-color);
+  color: var(--dark-color);
 }
 
 #main-nav .social {
@@ -235,3 +249,40 @@ h1, h2, h3, h4, h5, h6 {
   grid-column: 2 / span 2;
 }
 
+/* Footer */
+#main-footer {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+#main-footer img {
+  width: 150px;
+}
+
+#main-footer a {
+  color: #fff;
+}
+
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}
+
+#main-footer .footer-container > *:last-child {
+  background-color: #444;
+  grid-column: 1 / span 4;
+  padding: .5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+#main-footer .footer-container input[type='email'] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type='submit'] {
+  width: 90%;
+}
